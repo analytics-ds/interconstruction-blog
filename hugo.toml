@@ -1,0 +1,173 @@
+baseURL = "https://magazine.interconstruction.fr/"
+title = "Le Mag Interconstruction"
+theme = "mag-interconstruction"
+timeZone = "Europe/Paris"
+
+defaultContentLanguage = "fr"
+defaultContentLanguageInSubdir = false
+
+[languages]
+  [languages.fr]
+    languageCode = "fr-FR"
+    languageName = "Français"
+    contentDir = "content/fr"
+    weight = 1
+    title = "Le Mag Interconstruction"
+    [languages.fr.params]
+      description = "Le magazine de l'immobilier neuf en Île-de-France : conseils, guides et actualités pour acheter, investir et habiter dans le neuf."
+
+  [languages.en]
+    languageCode = "en-US"
+    languageName = "English"
+    contentDir = "content/en"
+    weight = 2
+    title = "Le Mag Interconstruction"
+    [languages.en.params]
+      description = "The new-build real estate magazine for the Île-de-France region: tips, guides and news to buy, invest and live in new homes."
+
+[taxonomies]
+  category = "categories"
+
+# Menu FR
+[[languages.fr.menus.main]]
+  name = "Acheter pour habiter"
+  url = "/categories/acheter-dans-le-neuf/"
+  weight = 2
+[[languages.fr.menus.main]]
+  name = "Acheter pour investir"
+  url = "/categories/investissement-locatif/"
+  weight = 3
+[[languages.fr.menus.main]]
+  name = "Financement et aides"
+  url = "/categories/financement-et-aides/"
+  weight = 4
+[[languages.fr.menus.main]]
+  name = "Simulateurs"
+  identifier = "simulateurs"
+  url = "/simulateurs/"
+  weight = 5
+[[languages.fr.menus.main]]
+  name = "Capacité d'emprunt"
+  parent = "simulateurs"
+  url = "/simulateurs/capacite-emprunt/"
+  weight = 1
+[[languages.fr.menus.main]]
+  name = "Frais de notaire"
+  parent = "simulateurs"
+  url = "/simulateurs/frais-de-notaire/"
+  weight = 2
+[[languages.fr.menus.main]]
+  name = "Prêt à taux zéro"
+  parent = "simulateurs"
+  url = "/simulateurs/pret-taux-zero/"
+  weight = 3
+[[languages.fr.menus.main]]
+  name = "Mensualités"
+  parent = "simulateurs"
+  url = "/simulateurs/mensualites/"
+  weight = 4
+[[languages.fr.menus.main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 99
+
+# Liste des categories (accueil + footer, hors menu header)
+[[languages.fr.menus.categories]]
+  name = "Acheter pour habiter"
+  url = "/categories/acheter-dans-le-neuf/"
+  weight = 1
+[[languages.fr.menus.categories]]
+  name = "Acheter pour investir"
+  url = "/categories/investissement-locatif/"
+  weight = 2
+[[languages.fr.menus.categories]]
+  name = "Financement et aides"
+  url = "/categories/financement-et-aides/"
+  weight = 3
+[[languages.fr.menus.categories]]
+  name = "Comparatifs et classements"
+  url = "/categories/comparatifs-et-classements/"
+  weight = 4
+
+# Menu EN
+[[languages.en.menus.main]]
+  name = "Buy to live in"
+  url = "/en/categories/buying-new-build/"
+  weight = 2
+[[languages.en.menus.main]]
+  name = "Buy to invest"
+  url = "/en/categories/rental-investment/"
+  weight = 3
+[[languages.en.menus.main]]
+  name = "Financing and grants"
+  url = "/en/categories/financing-and-grants/"
+  weight = 4
+[[languages.en.menus.main]]
+  name = "Calculators"
+  identifier = "calculators"
+  url = "/en/calculators/"
+  weight = 5
+[[languages.en.menus.main]]
+  name = "Borrowing capacity"
+  parent = "calculators"
+  url = "/en/calculators/borrowing-capacity/"
+  weight = 1
+[[languages.en.menus.main]]
+  name = "Notary fees"
+  parent = "calculators"
+  url = "/en/calculators/notary-fees/"
+  weight = 2
+[[languages.en.menus.main]]
+  name = "Zero-rate loan"
+  parent = "calculators"
+  url = "/en/calculators/zero-rate-loan/"
+  weight = 3
+[[languages.en.menus.main]]
+  name = "Monthly payments"
+  parent = "calculators"
+  url = "/en/calculators/monthly-payments/"
+  weight = 4
+[[languages.en.menus.main]]
+  name = "Blog"
+  url = "/en/blog/"
+  weight = 99
+
+# Categories list (home + footer, excluded from header menu)
+[[languages.en.menus.categories]]
+  name = "Buy to live in"
+  url = "/en/categories/buying-new-build/"
+  weight = 1
+[[languages.en.menus.categories]]
+  name = "Buy to invest"
+  url = "/en/categories/rental-investment/"
+  weight = 2
+[[languages.en.menus.categories]]
+  name = "Financing and grants"
+  url = "/en/categories/financing-and-grants/"
+  weight = 3
+[[languages.en.menus.categories]]
+  name = "Comparisons and rankings"
+  url = "/en/categories/comparisons-and-rankings/"
+  weight = 4
+
+[params]
+  default_og_image = "/images/og-default.jpg"
+  logo = "/favicon.png"
+  founding_year = "2026"
+  expertise = ["Immobilier neuf", "Investissement immobilier", "Île-de-France"]
+  og_locale_alternate = "en_US"
+
+[related]
+  includeNewer = true
+  threshold = 80
+  [[related.indices]]
+    name = "categories"
+    weight = 100
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 2
+    ordered = true
+  [markup.goldmark.renderer]
+    unsafe = true

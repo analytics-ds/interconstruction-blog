@@ -1,0 +1,169 @@
+{{ define "main" }}
+{{ $lang := .Site.Language.Lang }}
+
+{{ if and (eq .Kind "section") (eq .Section "blog") }}
+<section class="blog-hero">
+    <div class="container">
+        <div class="blog-hero-text">
+            <nav class="blog-breadcrumb" aria-label="{{ if eq $lang "en" }}Breadcrumb{{ else }}Fil d'Ariane{{ end }}">
+                <ol>
+                    <li><a href="{{ "/" | relLangURL }}">{{ if eq $lang "en" }}Home{{ else }}Accueil{{ end }}</a></li>
+                    <li aria-current="page">{{ .Title }}</li>
+                </ol>
+            </nav>
+            <h1 class="blog-hero-title">{{ .Title }}</h1>
+            {{ with .Description }}<p class="blog-hero-desc">{{ . }}</p>{{ end }}
+            <form class="blog-search" role="search" onsubmit="return false;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="search" id="blog-search-input" placeholder="{{ if eq $lang "en" }}Search an article...{{ else }}Rechercher un article...{{ end }}" aria-label="{{ if eq $lang "en" }}Search an article{{ else }}Rechercher un article{{ end }}" autocomplete="off">
+            </form>
+        </div>
+    </div>
+    <div class="blog-hero-image">
+        <img src="{{ "images/blog-hero.jpg" | relURL }}" alt="{{ if eq $lang "en" }}New-build development by Interconstruction in Île-de-France{{ else }}Programme immobilier neuf Interconstruction en Île-de-France{{ end }}" width="1500" height="843" loading="eager">
+    </div>
+</section>
+<nav class="blog-catbar" aria-label="{{ if eq $lang "en" }}Browse by category{{ else }}Parcourir par catégorie{{ end }}">
+    <div class="container">
+        {{ range .Site.Menus.categories }}
+        <a href="{{ .URL | relURL }}" class="blog-catbar-link">{{ .Name }}</a>
+        {{ end }}
+    </div>
+</nav>
+{{ else }}
+<section class="list-header">
+    <div class="container">
+        <nav class="blog-breadcrumb list-breadcrumb" aria-label="{{ if eq $lang "en" }}Breadcrumb{{ else }}Fil d'Ariane{{ end }}">
+            <ol>
+                <li><a href="{{ "/" | relLangURL }}">{{ if eq $lang "en" }}Home{{ else }}Accueil{{ end }}</a></li>
+                <li><a href="{{ "blog/" | relLangURL }}">Blog</a></li>
+                <li aria-current="page">{{ .Title }}</li>
+            </ol>
+        </nav>
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}<p class="list-description">{{ . }}</p>{{ end }}
+        <span class="list-count">{{ len .Pages }} {{ if gt (len .Pages) 1 }}articles{{ else }}article{{ end }}</span>
+    </div>
+</section>
+{{ end }}
+
+<section class="list-content">
+    <div class="container">
+        {{ $all := .Pages.ByDate.Reverse }}
+        {{ $featured := false }}
+        {{ $rest := $all }}
+        {{ if gt (len $all) 0 }}
+            {{ $featured = index $all 0 }}
+            {{ $rest = after 1 $all }}
+        {{ end }}
+        {{ $paginator := .Paginate $rest 6 }}
+
+        {{ if and (eq .Kind "section") (eq .Section "blog") }}
+        <script id="blog-search-index" type="application/json">[{{ range $i, $p := (where .Site.RegularPages "Section" "blog").ByDate.Reverse }}{{ if $i }},{{ end }}{"t":{{ $p.Title | jsonify }},"u":{{ $p.RelPermalink | jsonify }},"d":{{ with $p.Description }}{{ . | jsonify }}{{ else }}""{{ end }},"c":{{ with $p.Params.categories }}{{ index . 0 | jsonify }}{{ else }}""{{ end }}}{{ end }}]</script>
+
+        <div id="blog-search-results" class="search-results" hidden
+             data-many="{{ if eq $lang "en" }}results{{ else }}résultats{{ end }}"
+             data-one="{{ if eq $lang "en" }}result{{ else }}résultat{{ end }}"
+             data-none="{{ if eq $lang "en" }}No article found{{ else }}Aucun article trouvé{{ end }}">
+            <h2 class="section-subtitle" id="search-results-count"></h2>
+            <div class="grid-articles-2col" id="search-results-grid"></div>
+        </div>
+        {{ end }}
+
+        <div id="blog-default-content">
+        {{ if and $featured (eq $paginator.PageNumber 1) }}
+        <h2 class="section-subtitle">{{ if eq $lang "en" }}Featured article{{ else }}Article à la une{{ end }}</h2>
+        <article class="featured-article">
+            <a href="{{ $featured.RelPermalink }}" class="featured-image-wrapper" aria-label="{{ $featured.Title }}">
+                {{ if $featured.Params.image }}
+                <img src="{{ $featured.Params.image | relURL }}" alt="{{ $featured.Params.imageAlt | default $featured.Title }}" loading="lazy" width="800" height="500">
+                {{ else }}
+                <span class="featured-image-placeholder" aria-hidden="true">{{ slicestr $featured.Title 0 1 }}</span>
+                {{ end }}
+            </a>
+            <div class="featured-body">
+                <div class="article-meta">
+                    {{ with $featured.Params.categories }}<span class="article-category">{{ index . 0 }}</span>{{ end }}
+                    <time datetime="{{ $featured.Date.Format "2006-01-02" }}">{{ time.Format "2 January 2006" $featured.Date }}</time>
+                    {{ if $featured.Params.readingTime }}<span class="reading-time">{{ $featured.ReadingTime }} {{ if eq $lang "en" }}min read{{ else }}min{{ end }}</span>{{ end }}
+                </div>
+                <h2><a href="{{ $featured.RelPermalink }}">{{ $featured.Title }}</a></h2>
+                {{ with $featured.Description }}<p>{{ . }}</p>{{ end }}
+                <a href="{{ $featured.RelPermalink }}" class="read-more">{{ if eq $lang "en" }}Read the article{{ else }}Lire l'article{{ end }}</a>
+            </div>
+        </article>
+        {{ end }}
+
+        {{ if $paginator.Pages }}
+        <div class="grid-articles-2col">
+            {{ range $paginator.Pages }}
+            <article class="article-card">
+                <a href="{{ .RelPermalink }}" class="article-card-image-wrapper" aria-label="{{ .Title }}">
+                    {{ if .Params.image }}
+                    <img src="{{ .Params.image | relURL }}" alt="{{ .Params.imageAlt | default .Title }}" class="article-card-image" loading="lazy" width="600" height="400">
+                    {{ else }}
+                    <span class="article-card-image article-card-image-placeholder" aria-hidden="true">{{ slicestr .Title 0 1 }}</span>
+                    {{ end }}
+                </a>
+                <div class="article-card-body">
+                    <div class="article-meta">
+                        {{ with .Params.categories }}<span class="article-category">{{ index . 0 }}</span>{{ end }}
+                        <time>{{ time.Format "2 January 2006" .Date }}</time>
+                        {{ if .Params.readingTime }}<span class="reading-time">{{ .ReadingTime }} min</span>{{ end }}
+                    </div>
+                    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                    <p>{{ .Description }}</p>
+                    <a href="{{ .RelPermalink }}" class="read-more">{{ if eq $lang "en" }}Read more{{ else }}Lire la suite{{ end }}</a>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+        {{ end }}
+
+        {{ if gt $paginator.TotalPages 1 }}
+        <nav class="pagination" aria-label="Pagination">
+            {{ if $paginator.HasPrev }}<a class="pagination-link" href="{{ $paginator.Prev.URL }}" aria-label="{{ if eq $lang "en" }}Previous page{{ else }}Page précédente{{ end }}">‹</a>{{ end }}
+            {{ range $paginator.Pagers }}
+            <a class="pagination-link{{ if eq .PageNumber $paginator.PageNumber }} active{{ end }}" href="{{ .URL }}">{{ .PageNumber }}</a>
+            {{ end }}
+            {{ if $paginator.HasNext }}<a class="pagination-link" href="{{ $paginator.Next.URL }}" aria-label="{{ if eq $lang "en" }}Next page{{ else }}Page suivante{{ end }}">›</a>{{ end }}
+        </nav>
+        {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ if and (eq .Kind "section") (eq .Section "blog") }}
+<script>
+(function() {
+    var input = document.getElementById('blog-search-input');
+    var idxEl = document.getElementById('blog-search-index');
+    if (!input || !idxEl) return;
+    var data = [];
+    try { data = JSON.parse(idxEl.textContent || '[]'); } catch (e) { return; }
+    var def = document.getElementById('blog-default-content');
+    var res = document.getElementById('blog-search-results');
+    var grid = document.getElementById('search-results-grid');
+    var countEl = document.getElementById('search-results-count');
+    var norm = function(s) { return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); };
+    var esc = function(s) { return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); };
+    input.addEventListener('input', function() {
+        var q = norm(input.value.trim());
+        if (!q) { res.hidden = true; def.hidden = false; grid.innerHTML = ''; return; }
+        var matches = data.filter(function(a) { return norm(a.t + ' ' + a.d + ' ' + a.c).indexOf(q) !== -1; });
+        grid.innerHTML = matches.map(function(a) {
+            return '<a class="search-result-card" href="' + a.u + '">' +
+                (a.c ? '<span class="article-category">' + esc(a.c) + '</span>' : '') +
+                '<h3>' + esc(a.t) + '</h3>' +
+                (a.d ? '<p>' + esc(a.d) + '</p>' : '') + '</a>';
+        }).join('');
+        countEl.textContent = matches.length === 0 ? res.dataset.none :
+            (matches.length + ' ' + (matches.length > 1 ? res.dataset.many : res.dataset.one));
+        def.hidden = true;
+        res.hidden = false;
+    });
+})();
+</script>
+{{ end }}
+
+{{ end }}

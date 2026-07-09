@@ -1,0 +1,237 @@
+# Auteurs du blog — multilingue FR/EN
+# Ce fichier est copie dans `data/authors.yaml` a la racine du site Hugo a la creation du site.
+# Hugo le lit nativement via `.Site.Data.authors` dans les templates.
+#
+# Structure : map d'auteurs indexee par ID (slug)
+# L'ID est utilise dans le frontmatter des articles comme `author: thomas-durand`
+#
+# Le champ `topics` sert a la selection automatique de l'auteur dans /create-article.
+# Le champ `expertise` alimente le schema.org Person -> knowsAbout.
+
+thomas-durand:
+  id: thomas-durand
+  name: Thomas Durand
+  type: person
+  avatar: ""
+  linkedinUrl: ""
+  jobTitle:
+    fr: Rédacteur en chef & analyste tech
+    en: Editor-in-Chief & tech analyst
+  role:
+    fr: Rédacteur en chef & analyste tech
+    en: Editor-in-Chief & tech analyst
+  bio:
+    fr: "Thomas Durand est rédacteur en chef. Passionné de technologie, il teste et compare les solutions numériques pour aider les professionnels et particuliers à faire les bons choix."
+    en: "Thomas Durand is Editor-in-Chief. Passionate about technology, he tests and compares digital solutions to help professionals and individuals make the right choices."
+  expertise:
+    - SaaS
+    - Cloud Computing
+    - Cybersécurité
+    - Outils de productivité
+    - Intelligence artificielle
+    - Matériel informatique
+  topics:
+    - tech
+    - technologie
+    - saas
+    - logiciel
+    - cloud
+    - cybersecurite
+    - securite informatique
+    - ia
+    - intelligence artificielle
+    - productivite
+    - outils pro
+    - b2b
+    - informatique
+    - hardware
+
+magalie-ergoz:
+  id: magalie-ergoz
+  name: Magalie Ergoz
+  type: person
+  avatar: ""
+  linkedinUrl: ""
+  jobTitle:
+    fr: Blogueuse mode & beauté
+    en: Fashion & beauty blogger
+  role:
+    fr: Spécialiste mode & beauté
+    en: Fashion & beauty specialist
+  bio:
+    fr: "Magalie Ergoz est blogueuse spécialisée en mode et beauté. Elle teste et compare les marques pour aider ses lectrices et lecteurs à trouver les meilleurs produits au juste prix."
+    en: "Magalie Ergoz is a fashion and beauty blogger. She tests and compares brands to help her readers find the best products at the right price."
+  expertise:
+    - Mode
+    - Beauté
+    - Cosmétiques
+    - Accessoires
+    - Skincare
+    - Parfums
+  topics:
+    - mode
+    - fashion
+    - beaute
+    - cosmetique
+    - maquillage
+    - skincare
+    - parfum
+    - accessoire
+    - vetement
+    - lifestyle feminin
+    - luxe
+
+claire-beaumont:
+  id: claire-beaumont
+  name: Claire Beaumont
+  type: person
+  avatar: ""
+  linkedinUrl: ""
+  jobTitle:
+    fr: Architecte d'intérieur & blogueuse déco
+    en: Interior designer & home blogger
+  role:
+    fr: Experte habitat & rénovation
+    en: Home & renovation expert
+  bio:
+    fr: "Claire Beaumont est architecte d'intérieur de formation et blogueuse depuis plus de 10 ans. Elle teste et compare outils, matériaux et prestataires pour aider particuliers et bricoleurs à réussir leurs projets habitat."
+    en: "Claire Beaumont is a trained interior designer and has been blogging for over 10 years. She tests and compares tools, materials and service providers to help homeowners and DIYers succeed in their home projects."
+  expertise:
+    - Rénovation
+    - Décoration intérieure
+    - Bricolage
+    - Aménagement extérieur
+    - Matériaux de construction
+    - Mobilier
+  topics:
+    - maison
+    - habitat
+    - renovation
+    - decoration
+    - bricolage
+    - amenagement
+    - jardin
+    - exterieur
+    - mobilier
+    - outillage
+    - construction
+    - materiau
+    - travaux
+    - immobilier residentiel
+
+laura-verdier:
+  id: laura-verdier
+  name: Laura Verdier
+  type: person
+  avatar: ""
+  linkedinUrl: ""
+  jobTitle:
+    fr: Journaliste santé & bien-être
+    en: Health & wellness journalist
+  role:
+    fr: Spécialiste nutrition & bien-être
+    en: Nutrition & wellness specialist
+  bio:
+    fr: "Laura Verdier est journaliste spécialisée en santé, nutrition et bien-être depuis 8 ans. Elle décortique les marques, les études et les tendances pour offrir à ses lecteurs une information fiable et accessible."
+    en: "Laura Verdier has been a journalist specializing in health, nutrition, and wellness for 8 years. She dissects brands, studies, and trends to provide her readers with reliable and accessible information."
+  expertise:
+    - Nutrition
+    - Bien-être
+    - Compléments alimentaires
+    - Médecine douce
+    - Fitness
+    - Sommeil
+  topics:
+    - sante
+    - bien etre
+    - nutrition
+    - alimentation
+    - complement alimentaire
+    - medecine naturelle
+    - phytotherapie
+    - fitness
+    - sport
+    - sommeil
+    - stress
+    - mental
+    - dietetique
+    - vitalite
+
+kevin-moreau:
+  id: kevin-moreau
+  name: Kevin Moreau
+  type: person
+  avatar: ""
+  linkedinUrl: ""
+  jobTitle:
+    fr: Journaliste auto & mobilité
+    en: Auto & mobility journalist
+  role:
+    fr: Spécialiste transport & mobilité
+    en: Transport & mobility specialist
+  bio:
+    fr: "Kevin Moreau couvre l'actualité automobile et des nouvelles mobilités depuis 12 ans. Il teste véhicules, solutions de transport et services de voyage pour guider les lecteurs dans leurs choix."
+    en: "Kevin Moreau has covered automotive news and new mobility for 12 years. He tests vehicles, transport solutions and travel services to guide readers in their choices."
+  expertise:
+    - Automobile
+    - Mobilité électrique
+    - Transport urbain
+    - Voyage
+    - Train
+    - Aviation
+  topics:
+    - transport
+    - automobile
+    - voiture
+    - auto
+    - moto
+    - velo
+    - trottinette
+    - mobilite
+    - electrique
+    - vehicule
+    - voyage
+    - train
+    - avion
+    - deplacement
+    - location vehicule
+
+sophie-martin:
+  id: sophie-martin
+  name: Sophie Martin
+  type: person
+  avatar: ""
+  linkedinUrl: ""
+  jobTitle:
+    fr: Journaliste finance & patrimoine
+    en: Finance & wealth journalist
+  role:
+    fr: Spécialiste épargne et investissement
+    en: Savings & investment specialist
+  bio:
+    fr: "Sophie Martin est journaliste financière indépendante depuis 10 ans. Elle analyse et compare produits d'épargne, solutions d'investissement et stratégies patrimoniales pour démocratiser la finance personnelle."
+    en: "Sophie Martin has been an independent financial journalist for 10 years. She analyzes and compares savings products, investment solutions and wealth strategies to democratize personal finance."
+  expertise:
+    - Épargne
+    - Investissement
+    - Immobilier locatif
+    - Fiscalité
+    - Assurance vie
+    - Bourse
+  topics:
+    - finance
+    - placement
+    - epargne
+    - investissement
+    - bourse
+    - immobilier locatif
+    - scpi
+    - assurance vie
+    - pel
+    - livret
+    - fiscalite
+    - impot
+    - patrimoine
+    - retraite
+    - credit
+    - banque

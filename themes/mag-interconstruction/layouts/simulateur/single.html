@@ -1,0 +1,57 @@
+{{ define "main" }}
+{{ $lang := .Site.Language.Lang }}
+
+<article class="simulateur-page">
+    <div class="container">
+
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb" aria-label="{{ if eq $lang "en" }}Breadcrumb{{ else }}Fil d'Ariane{{ end }}">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="{{ "/" | relLangURL }}">{{ if eq $lang "en" }}Home{{ else }}Accueil{{ end }}</a>
+                    <svg class="breadcrumb-sep" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 4 10 8 6 12" /></svg>
+                </li>
+                {{ with .Parent }}
+                <li class="breadcrumb-item">
+                    <a href="{{ .RelPermalink }}">{{ if eq $lang "en" }}Calculators{{ else }}Simulateurs{{ end }}</a>
+                    <svg class="breadcrumb-sep" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 4 10 8 6 12" /></svg>
+                </li>
+                {{ end }}
+                <li class="breadcrumb-item">
+                    <span aria-current="page">{{ .Title }}</span>
+                </li>
+            </ol>
+        </nav>
+
+        <header class="sim-header">
+            <span class="sim-eyebrow">{{ if eq $lang "en" }}Free calculator{{ else }}Simulateur gratuit{{ end }}</span>
+            <h1 class="sim-title">{{ .Title }}</h1>
+            {{ with .Description }}<p class="sim-intro">{{ . }}</p>{{ end }}
+        </header>
+
+        <div class="sim-content prose article-content">
+            {{ .Content }}
+        </div>
+
+        <!-- Autres simulateurs -->
+        {{ with .Parent }}
+        <aside class="sim-others">
+            <h2 class="section-subtitle">{{ if eq $lang "en" }}Other calculators{{ else }}Nos autres simulateurs{{ end }}</h2>
+            <div class="sim-others-grid">
+                {{ range .Pages }}
+                {{ if ne .RelPermalink $.RelPermalink }}
+                <a href="{{ .RelPermalink }}" class="sim-other-card">
+                    <span class="sim-other-name">{{ .Title }}</span>
+                    {{ with .Description }}<span class="sim-other-desc">{{ . }}</span>{{ end }}
+                </a>
+                {{ end }}
+                {{ end }}
+            </div>
+        </aside>
+        {{ end }}
+
+    </div>
+</article>
+
+<script src="{{ "js/simulateurs.js" | relURL }}" defer></script>
+{{ end }}

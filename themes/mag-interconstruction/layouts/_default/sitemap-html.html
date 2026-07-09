@@ -1,0 +1,83 @@
+{{ define "main" }}
+{{ $lang := .Site.Language.Lang }}
+{{ $langPages := where .Site.RegularPages "Language.Lang" $lang }}
+
+<section class="sitemap-page">
+    <header class="list-header">
+        <div class="container">
+            <h1>{{ if eq $lang "en" }}Site map{{ else }}Plan du site{{ end }}</h1>
+            <p class="list-description">{{ if eq $lang "en" }}All pages of {{ .Site.Title }}{{ else }}Toutes les pages de {{ .Site.Title }}{{ end }}</p>
+        </div>
+    </header>
+
+    <div class="sitemap-content">
+        <div class="container container-narrow">
+
+            <div class="sitemap-section">
+                <h2>{{ if eq $lang "en" }}Main pages{{ else }}Pages principales{{ end }}</h2>
+                <ul class="sitemap-list">
+                    <li>
+                        <a href="{{ "/" | relLangURL }}">{{ if eq $lang "en" }}Home{{ else }}Accueil{{ end }}</a>
+                    </li>
+                    {{ range .Site.Menus.main }}
+                    <li>
+                        <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+
+            {{ with .Site.Menus.categories }}
+            <div class="sitemap-section">
+                <h2>{{ if eq $lang "en" }}Categories{{ else }}Catégories{{ end }}</h2>
+                <ul class="sitemap-list">
+                    {{ range . }}
+                    <li>
+                        <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+            {{ end }}
+
+            {{ $blog := where $langPages "Section" "blog" }}
+            {{ if $blog }}
+            <div class="sitemap-section">
+                <h2>{{ if eq $lang "en" }}Blog articles{{ else }}Articles du blog{{ end }}</h2>
+                <ul class="sitemap-list">
+                    {{ range $blog.ByDate.Reverse }}
+                    <li>
+                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                        <span class="sitemap-date">
+                            {{ with .Params.lastmod }}
+                                {{ (time .).Format "02/01/2006" }}
+                            {{ else }}
+                                {{ .Date.Format "02/01/2006" }}
+                            {{ end }}
+                        </span>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+            {{ end }}
+
+            {{ $simSection := "simulateurs" }}{{ if eq $lang "en" }}{{ $simSection = "calculators" }}{{ end }}
+            {{ $sims := where (where .Site.RegularPages "Section" $simSection) "Language.Lang" $lang }}
+            {{ if $sims }}
+            <div class="sitemap-section">
+                <h2>{{ if eq $lang "en" }}Calculators{{ else }}Simulateurs{{ end }}</h2>
+                <ul class="sitemap-list">
+                    {{ range $sims }}
+                    <li>
+                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+            {{ end }}
+
+        </div>
+    </div>
+</section>
+
+{{ end }}

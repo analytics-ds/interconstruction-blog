@@ -1,0 +1,164 @@
+{{ define "main" }}
+{{ $lang := .Site.Language.Lang }}
+
+<!-- Hero Section -->
+<section class="hero" style="background-image: linear-gradient(135deg, rgba(35,34,33,0.78) 0%, rgba(69,90,71,0.7) 100%), url('{{ "images/hero-home.jpg" | relURL }}');">
+    <div class="hero-content">
+        <span class="hero-badge">{{ if eq $lang "en" }}New-build real estate · Greater Paris{{ else }}Immobilier neuf · Île-de-France{{ end }}</span>
+        <h1>{{ if eq $lang "en" }}The new-build real estate magazine{{ else }}Le magazine de l'immobilier neuf{{ end }}</h1>
+        <p class="hero-description">{{ if eq $lang "en" }}Tips, guides and news to buy, invest and live in new homes across the Île-de-France region.{{ else }}Conseils, guides et actualités pour acheter, investir et habiter dans le neuf en Île-de-France.{{ end }}</p>
+        <a href="{{ "blog/" | relLangURL }}" class="btn-primary">{{ if eq $lang "en" }}Explore the blog{{ else }}Explorer le blog{{ end }}</a>
+    </div>
+</section>
+
+<!-- Atouts Section -->
+<section class="atouts-section">
+    <div class="container">
+        <h2 class="section-title">{{ if eq $lang "en" }}Why buy new-build?{{ else }}Pourquoi acheter dans le neuf&nbsp;?{{ end }}</h2>
+        <div class="atouts-grid">
+            <div class="atout-item">
+                <span class="atout-icon" aria-hidden="true">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+                </span>
+                <div class="atout-text">
+                    <h3>{{ if eq $lang "en" }}Reduced notary fees{{ else }}Frais de notaire réduits{{ end }}</h3>
+                    <p>{{ if eq $lang "en" }}Around 2 to 3% of the price in new-build, versus 7 to 8% for older homes.{{ else }}Environ 2 à 3 % du prix dans le neuf, contre 7 à 8 % dans l'ancien.{{ end }}</p>
+                </div>
+            </div>
+            <div class="atout-item">
+                <span class="atout-icon" aria-hidden="true">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                </span>
+                <div class="atout-text">
+                    <h3>{{ if eq $lang "en" }}Builder guarantees{{ else }}Garanties constructeur{{ end }}</h3>
+                    <p>{{ if eq $lang "en" }}Completion, two-year and ten-year guarantees protect your purchase.{{ else }}Parfait achèvement, biennale et décennale protègent votre achat.{{ end }}</p>
+                </div>
+            </div>
+            <div class="atout-item">
+                <span class="atout-icon" aria-hidden="true">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </span>
+                <div class="atout-text">
+                    <h3>{{ if eq $lang "en" }}Energy performance{{ else }}Performance énergétique{{ end }}</h3>
+                    <p>{{ if eq $lang "en" }}Homes built to the RE2020 standard, cutting energy bills by around 30%.{{ else }}Des logements aux normes RE2020, réduisant la facture d'énergie d'environ 30 %.{{ end }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Categories Section -->
+<section class="categories-section">
+    <div class="container">
+        <h2 class="section-title">{{ if eq $lang "en" }}Our categories{{ else }}Nos catégories{{ end }}</h2>
+        {{ $catMenu := .Site.Menus.categories }}
+        {{ $icons := slice
+            (`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`)
+            (`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>`)
+            (`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>`)
+            (`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M5 9a2 2 0 0 1-2-2V5h4"/><path d="M19 9a2 2 0 0 0 2-2V5h-4"/></svg>`)
+        }}
+        {{ $discover := cond (eq $lang "en") "Discover" "Découvrir" }}
+        <div class="grid-categories">
+            {{ range $i, $m := $catMenu }}
+            {{ $term := index $.Site.Taxonomies.categories ($m.Name | urlize) }}
+            <a href="{{ $m.URL | relURL }}" class="category-card">
+                <span class="category-card-icon" aria-hidden="true">{{ index $icons (mod $i (len $icons)) | safeHTML }}</span>
+                <h3>{{ $m.Name }}</h3>
+                {{ with $term }}<span class="category-count">{{ .Count }} {{ if gt .Count 1 }}articles{{ else }}article{{ end }}</span>{{ end }}
+                <span class="category-card-arrow">{{ $discover }} <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<!-- A propos Interconstruction -->
+<section class="about-section">
+    <div class="container">
+        <div class="about-split">
+        <div class="about-content">
+            <span class="about-eyebrow">{{ if eq $lang "en" }}The developer{{ else }}Le promoteur{{ end }}</span>
+            <h2 class="section-title">{{ if eq $lang "en" }}About Interconstruction{{ else }}À propos d'Interconstruction{{ end }}</h2>
+            <p>{{ if eq $lang "en" }}Since 1960, we have been designing and building new homes across the Île-de-France region. From first homes to rental investment, including the bail réel solidaire (BRS) scheme, we support every step of a new-build purchase. Through this magazine, we share our advice and analysis to help you make your project happen.{{ else }}Depuis 1960, nous concevons et construisons des logements neufs en Île-de-France. De l'accession à la résidence principale à l'investissement locatif, en passant par le bail réel solidaire (BRS), nous accompagnons chaque étape d'un achat dans le neuf. À travers ce magazine, nous partageons nos conseils et analyses pour vous aider à concrétiser votre projet.{{ end }}</p>
+            <a href="https://www.interconstruction.fr/" class="btn-outline" rel="noopener">{{ if eq $lang "en" }}Discover Interconstruction{{ else }}Découvrir Interconstruction{{ end }}</a>
+        </div>
+        <div class="about-image">
+            <img src="{{ "images/about-interconstruction.jpg" | relURL }}" alt="{{ if eq $lang "en" }}New-build residential development by Interconstruction in Île-de-France{{ else }}Programme immobilier neuf Interconstruction en Île-de-France{{ end }}" loading="lazy" width="1800" height="1350">
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- Simulateurs Section -->
+<section class="simulateurs-section">
+    <div class="container">
+        <div class="atouts-intro">
+            <h2 class="section-title">{{ if eq $lang "en" }}Plan your property project{{ else }}Préparez votre projet immobilier{{ end }}</h2>
+            <p>{{ if eq $lang "en" }}Estimate your budget and financing for a new-build purchase in just a few clicks.{{ else }}Estimez votre budget et votre financement pour un achat dans le neuf en quelques clics.{{ end }}</p>
+        </div>
+        {{ $sims := slice }}
+        {{ range .Site.Menus.main }}{{ if .HasChildren }}{{ $sims = .Children }}{{ end }}{{ end }}
+        {{ $simIcons := slice
+            (`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4z"/></svg>`)
+            (`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>`)
+            (`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>`)
+            (`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>`)
+        }}
+        {{ $calc := cond (eq $lang "en") "Calculate" "Calculer" }}
+        <div class="grid-categories">
+            {{ range $i, $s := $sims }}
+            <a href="{{ $s.URL | relURL }}" class="category-card">
+                <span class="category-card-icon" aria-hidden="true">{{ index $simIcons (mod $i (len $simIcons)) | safeHTML }}</span>
+                <h3>{{ $s.Name }}</h3>
+                <span class="category-card-arrow">{{ $calc }} <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<!-- Latest Articles Section -->
+<section class="latest-section">
+    <div class="container">
+        <h2 class="section-title">{{ if eq $lang "en" }}Latest articles{{ else }}Derniers articles{{ end }}</h2>
+        <div class="grid-articles">
+            {{ range first 6 (where .Site.RegularPages "Section" "blog") }}
+            <article class="article-card">
+                <a href="{{ .RelPermalink }}" class="article-card-image-wrapper" aria-label="{{ .Title }}">
+                    {{ if .Params.image }}
+                    <img src="{{ .Params.image | relURL }}" alt="{{ .Params.imageAlt | default .Title }}" class="article-card-image" loading="lazy" width="600" height="400">
+                    {{ else }}
+                    <span class="article-card-image article-card-image-placeholder" aria-hidden="true">{{ slicestr .Title 0 1 }}</span>
+                    {{ end }}
+                </a>
+                <div class="article-card-body">
+                    <div class="article-meta">
+                        {{ with .Params.categories }}
+                        <span class="article-category">{{ index . 0 }}</span>
+                        {{ end }}
+                        <time>{{ time.Format "2 January 2006" .Date }}</time>
+                    </div>
+                    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                    <p>{{ .Description }}</p>
+                    <a href="{{ .RelPermalink }}" class="read-more">{{ if eq $lang "en" }}Read more{{ else }}Lire la suite{{ end }}</a>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+        <div class="latest-cta">
+            <a href="{{ "blog/" | relLangURL }}" class="btn-outline">{{ if eq $lang "en" }}See all articles{{ else }}Voir tous les articles{{ end }}</a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA final -->
+<section class="cta-band">
+    <div class="container">
+        <h2>{{ if eq $lang "en" }}A new-build project in Île-de-France?{{ else }}Un projet dans le neuf en Île-de-France ?{{ end }}</h2>
+        <p>{{ if eq $lang "en" }}Discover Interconstruction's new developments and find your future home.{{ else }}Découvrez les programmes neufs Interconstruction et trouvez votre futur logement.{{ end }}</p>
+        <a href="https://www.interconstruction.fr/" class="btn-primary" rel="noopener">{{ if eq $lang "en" }}See the developments{{ else }}Voir les programmes{{ end }}</a>
+    </div>
+</section>
+
+{{ end }}

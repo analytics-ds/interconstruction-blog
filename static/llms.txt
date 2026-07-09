@@ -1,0 +1,30 @@
+# Le Mag Interconstruction
+
+> Le magazine de l'immobilier neuf en Île-de-France : conseils, guides et actualités pour acheter, investir et habiter dans le neuf.
+
+## A propos
+
+Le Mag Interconstruction est le magazine éditorial d'Interconstruction, promoteur immobilier en Île-de-France. Il publie des guides factuels et bilingues (français et anglais) sur l'achat, l'investissement, le financement et la vie dans l'immobilier neuf francilien.
+
+## Contenu principal
+
+- Acheter dans le neuf : avantages, étapes, garanties et frais réduits.
+- Investissement locatif : rentabilité, dispositifs fiscaux et stratégies.
+- Financement et aides : prêt immobilier, PTZ, TVA réduite et aides à l'accession.
+- Vivre en Île-de-France : communes, transports du Grand Paris et qualité de vie.
+- Guides et conseils : VEFA, achat sur plan, livraison et conseils d'experts.
+
+## Articles recents
+
+- Acheter dans le neuf : avantages, étapes et garanties — /blog/acheter-dans-le-neuf-avantages-garanties/
+- Investissement locatif dans le neuf : rentabilité et dispositifs — /blog/investissement-locatif-neuf-rentabilite/
+- Financer un logement neuf : prêts et aides 2026 — /blog/financer-logement-neuf-prets-aides/
+- Vivre en Île-de-France : où acheter dans le neuf — /blog/vivre-ile-de-france-ou-acheter-neuf/
+- VEFA : comment acheter sur plan en toute sécurité — /blog/vefa-acheter-sur-plan-securite/
+
+## Informations techniques
+
+- Generateur : Hugo
+- Hebergement : GitHub Pages
+- Sitemap : https://magazine.interconstruction.fr/sitemap.xml
+- RSS : https://magazine.interconstruction.fr/index.xml
