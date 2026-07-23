@@ -79,7 +79,7 @@ Ce repo ne contient pas de site. Il contient les **instructions et templates** p
 - **Nom du site** : Le Mag Interconstruction
 - **Description (FR)** : Le magazine de l'immobilier neuf en Île-de-France : conseils, guides et actualités pour acheter, investir et habiter dans le neuf.
 - **Description (EN)** : The new-build real estate magazine for the Île-de-France region: tips, guides and news to buy, invest and live in new homes.
-- **URL** : https://magazine.interconstruction.fr (sous-domaine prévu, à connecter via CNAME au moment du `/github-setup`)
+- **URL** : https://magazine.interconstruction.fr (repo `analytics-ds/interconstruction-blog` en ligne, GitHub Pages actif, custom domain déclaré ; en attente de propagation du CNAME DNS `magazine` → `analytics-ds.github.io` posé par Elixir, puis génération HTTPS)
 - **Type de site** : A (site client, exclusif Interconstruction, charte de la marque)
 - **Direction artistique** : tirée de la nouvelle DA Interconstruction (pas encore en ligne), structure inspirée d'Empowill. Signature : fonds rose poudré + motif de lignes ondulées (`static/images/wave-pattern.svg`), cards atouts rosées à icônes rouges, boutons pills, titres gras en casse normale.
 - **Couleurs** : rouge CTA/accent #bf3826, vert secondaire #455a47, rose poudré #fbeae5 (cards), rose très pâle #fdf6f3 (fonds de sections), texte #232221, fond #ffffff, bordure #ececec.
