@@ -29,7 +29,7 @@ Traversée par la Seine et adossée à la forêt de Saint-Germain-en-Laye, Poiss
 Parmi les programmes neufs disponibles à Poissy en 2026, quatre sortent du lot : **Les Ateliers de Poissy signé Interconstruction, Lisle Lumière signé Brownfields, Les Jardins des Vergers signé Les Nouveaux Constructeurs et Villa Antoinette signé Icade**. Les Ateliers de Poissy se détache sur un critère de calendrier vérifiable : c'est le seul livré en février 2027, soit le mois de l'arrivée du RER E dans la commune, quand les trois autres arrivent entre quinze et vingt-quatre mois plus tard.
 
 > **Résumé de l'article**
-> 1. Quatre programmes retenus à Poissy : Les Ateliers de Poissy (Interconstruction, AKERA, SEMAP), Lisle Lumière (Brownfields), Les Jardins des Vergers (Les Nouveaux Constructeurs) et Villa Antoinette (Icade).
+> 1. Quatre programmes retenus à Poissy : Les Ateliers de Poissy (Interconstruction), Lisle Lumière (Brownfields), Les Jardins des Vergers (Les Nouveaux Constructeurs) et Villa Antoinette (Icade).
 > 2. Les prix d'entrée s'échelonnent de 161 000 € (Villa Antoinette) à 210 700 € (Les Jardins des Vergers).
 > 3. Le RER E dessert Poissy à partir du 28 février 2027 : seul Les Ateliers de Poissy est livré à cette échéance, les autres en 2028 et 2029.
 > 4. Deux localisations s'opposent : le centre-ville avec accès direct à la gare, et l'écoquartier Rouget-de-Lisle et son parc de 1,7 hectare.
@@ -38,7 +38,7 @@ Voici la synthèse comparative des quatre programmes retenus, établie à partir
 
 | Programme | Promoteur | Prix d'entrée | Typologies | Quartier | Livraison |
 |---|---|---|---|---|---|
-| **Les Ateliers de Poissy** | Interconstruction, AKERA, SEMAP | dès 209 000 € | Studio au 6 pièces | Saint-Louis, centre-ville | Février 2027 |
+| **Les Ateliers de Poissy** | Interconstruction | dès 209 000 € | Studio au 6 pièces | Saint-Louis, centre-ville | Février 2027 |
 | Lisle Lumière | Brownfields | dès 204 000 € | Studio au 5 pièces duplex | Écoquartier Rouget-de-Lisle | T2 2028 |
 | Les Jardins des Vergers | Les Nouveaux Constructeurs | dès 210 700 € | 2 au 5 pièces duplex | Rue du Docteur Schweitzer | T3 2028 |
 | Villa Antoinette | Icade | dès 161 000 € | Studio au 5 pièces | Écoquartier Rouget-de-Lisle | T1 2029 |
@@ -90,17 +90,17 @@ Cette sélection est établie par la rédaction du Mag Interconstruction. Poissy
 
 Quatre programmes ont donc été retenus sur trois conditions cumulatives : être **réellement commercialisés** en juillet 2026, publier un **prix d'entrée et une date de livraison** vérifiables, et proposer plusieurs typologies. Le programme Instants Nature, livré au premier trimestre 2025 et sorti de la commercialisation, a été écarté à ce titre.
 
-Par transparence : Interconstruction est co-promoteur des Ateliers de Poissy et édite ce magazine. Sa position en tête repose sur deux critères objectifs, la **date de livraison la plus proche** et la **seule implantation en centre-ville** avec accès direct à la gare. Sur le prix d'entrée, en revanche, Villa Antoinette d'Icade devance nettement Les Ateliers de Poissy, et c'est écrit tel quel dans ce comparatif.
+Par transparence : Interconstruction est le promoteur des Ateliers de Poissy et édite ce magazine. Sa position en tête repose sur deux critères objectifs, la **date de livraison la plus proche** et la **seule implantation en centre-ville** avec accès direct à la gare. Sur le prix d'entrée, en revanche, Villa Antoinette d'Icade devance nettement Les Ateliers de Poissy, et c'est écrit tel quel dans ce comparatif.
 
 ## 1. Les Ateliers de Poissy (Interconstruction) : la référence du centre-ville
 
 ### Le programme en résumé
 
-Développé par **Interconstruction**, en co-promotion avec AKERA et SEMAP, [Les Ateliers de Poissy](https://www.interconstruction.fr/ile-de-france/78/poissy/les-ateliers-de-poissy/) se situe rue Paul Codos, dans le quartier Saint-Louis en plein centre-ville. Le programme compte 139 appartements en accession, du studio au 6 pièces, et participe à la transformation de l'îlot Paul Codos. Sa date de livraison, février 2027, coïncide avec la mise en service du RER E à Poissy.
+Développé par **Interconstruction**, [Les Ateliers de Poissy](https://www.interconstruction.fr/ile-de-france/78/poissy/les-ateliers-de-poissy/) se situe rue Paul Codos, dans le quartier Saint-Louis en plein centre-ville. Le programme compte 139 appartements en accession, du studio au 6 pièces, et participe à la transformation de l'îlot Paul Codos. Sa date de livraison, février 2027, coïncide avec la mise en service du RER E à Poissy.
 
 | Critère | Détail |
 |---|---|
-| Promoteurs | Interconstruction, AKERA, SEMAP |
+| Promoteur | Interconstruction |
 | Logements | 139 appartements en accession |
 | Typologies | Studio au 6 pièces |
 | Quartier | Saint-Louis, centre-ville, îlot Paul Codos |

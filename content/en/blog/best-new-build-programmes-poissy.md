@@ -29,7 +29,7 @@ Crossed by the Seine and backing onto the Saint-Germain-en-Laye forest, Poissy c
 Among the new-build programmes available in Poissy in 2026, four stand out: **Les Ateliers de Poissy by Interconstruction, Lisle Lumière by Brownfields, Les Jardins des Vergers by Les Nouveaux Constructeurs and Villa Antoinette by Icade**. Les Ateliers de Poissy stands out on a verifiable timing criterion: it is the only one delivered in February 2027, the very month the RER E reaches the town, while the other three arrive between fifteen and twenty-four months later.
 
 > **Article summary**
-> 1. Four programmes selected in Poissy: Les Ateliers de Poissy (Interconstruction, AKERA, SEMAP), Lisle Lumière (Brownfields), Les Jardins des Vergers (Les Nouveaux Constructeurs) and Villa Antoinette (Icade).
+> 1. Four programmes selected in Poissy: Les Ateliers de Poissy (Interconstruction), Lisle Lumière (Brownfields), Les Jardins des Vergers (Les Nouveaux Constructeurs) and Villa Antoinette (Icade).
 > 2. Entry prices range from 161,000 € (Villa Antoinette) to 210,700 € (Les Jardins des Vergers).
 > 3. The RER E serves Poissy from 28 February 2027: only Les Ateliers de Poissy is delivered by then, the others in 2028 and 2029.
 > 4. Two locations compete: the town centre with direct station access, and the Rouget-de-Lisle eco-district with its 1.7-hectare park.
@@ -38,7 +38,7 @@ Here is the comparative summary of the four selected programmes, based on data c
 
 | Programme | Developer | Entry price | Unit types | Neighbourhood | Delivery |
 |---|---|---|---|---|---|
-| **Les Ateliers de Poissy** | Interconstruction, AKERA, SEMAP | from 209,000 € | Studio to 6 rooms | Saint-Louis, town centre | February 2027 |
+| **Les Ateliers de Poissy** | Interconstruction | from 209,000 € | Studio to 6 rooms | Saint-Louis, town centre | February 2027 |
 | Lisle Lumière | Brownfields | from 204,000 € | Studio to 5-room duplex | Rouget-de-Lisle eco-district | Q2 2028 |
 | Les Jardins des Vergers | Les Nouveaux Constructeurs | from 210,700 € | 2 to 5-room duplex | Rue du Docteur Schweitzer | Q3 2028 |
 | Villa Antoinette | Icade | from 161,000 € | Studio to 5 rooms | Rouget-de-Lisle eco-district | Q1 2029 |
@@ -90,17 +90,17 @@ This selection is compiled by the Mag Interconstruction editorial team. Poissy h
 
 Four programmes were therefore retained on three cumulative conditions: being **actively marketed** in July 2026, publishing a verifiable **entry price and delivery date**, and offering several unit types. The Instants Nature programme, delivered in the first quarter of 2025 and withdrawn from sale, was excluded on that basis.
 
-For transparency: Interconstruction is a co-developer of Les Ateliers de Poissy and publishes this magazine. Its leading position rests on two objective criteria, the **earliest delivery date** and the **only town-centre location** with direct station access. On entry price, however, Icade's Villa Antoinette clearly beats Les Ateliers de Poissy, and this comparison says so plainly.
+For transparency: Interconstruction is the developer of Les Ateliers de Poissy and publishes this magazine. Its leading position rests on two objective criteria, the **earliest delivery date** and the **only town-centre location** with direct station access. On entry price, however, Icade's Villa Antoinette clearly beats Les Ateliers de Poissy, and this comparison says so plainly.
 
 ## 1. Les Ateliers de Poissy (Interconstruction): the town-centre benchmark
 
 ### The programme at a glance
 
-Developed by **Interconstruction**, in co-promotion with AKERA and SEMAP, [Les Ateliers de Poissy](https://www.interconstruction.fr/ile-de-france/78/poissy/les-ateliers-de-poissy/) sits on rue Paul Codos, in the Saint-Louis district right in the town centre. The programme comprises 139 apartments for sale, from studios to 6-room units, and is part of the transformation of the Paul Codos block. Its delivery date, February 2027, coincides with the RER E entering service in Poissy.
+Developed by **Interconstruction**, [Les Ateliers de Poissy](https://www.interconstruction.fr/ile-de-france/78/poissy/les-ateliers-de-poissy/) sits on rue Paul Codos, in the Saint-Louis district right in the town centre. The programme comprises 139 apartments for sale, from studios to 6-room units, and is part of the transformation of the Paul Codos block. Its delivery date, February 2027, coincides with the RER E entering service in Poissy.
 
 | Criterion | Detail |
 |---|---|
-| Developers | Interconstruction, AKERA, SEMAP |
+| Developer | Interconstruction |
 | Homes | 139 apartments for sale |
 | Unit types | Studio to 6 rooms |
 | Neighbourhood | Saint-Louis, town centre, Paul Codos block |
