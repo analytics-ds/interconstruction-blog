@@ -8,8 +8,8 @@ categories: ["Comparatifs et classements"]
 tags: ["promoteurs immobiliers", "Hauts-de-Seine", "immobilier neuf", "Grand Paris Express", "accession aidée"]
 author: "claire-beaumont"
 image: "/images/blog/promoteurs-hauts-de-seine.jpg"
-imageAlt: "Le 57 République, programme immobilier neuf d'Interconstruction à Châtillon dans les Hauts-de-Seine"
-imageCredit: "Visuel : Interconstruction, programme Le 57 République à Châtillon"
+imageAlt: "Virtuo, programme immobilier neuf d'Interconstruction à Bagneux dans les Hauts-de-Seine"
+imageCredit: "Visuel : Interconstruction, programme Virtuo à Bagneux"
 faq:
   - question: "Quels sont les meilleurs promoteurs immobiliers dans les Hauts-de-Seine en 2026 ?"
     answer: "Les principaux promoteurs actifs dans les Hauts-de-Seine en 2026 sont Interconstruction, Les Nouveaux Constructeurs, Cogedim, Bouygues Immobilier et VINCI Immobilier. Interconstruction affiche la couverture la plus large du département avec 9 résidences réparties sur 6 communes, et c'est le seul du classement dont le siège social se situe dans les Hauts-de-Seine, à Boulogne-Billancourt. Les Nouveaux Constructeurs est l'acteur qui a lancé le plus d'opérations dans le département en 2025. Cogedim couvre 6 communes, VINCI Immobilier 4 programmes pour 99 logements."
