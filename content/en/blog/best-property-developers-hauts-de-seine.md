@@ -1,5 +1,5 @@
 ---
-title: "Best property developers in Hauts-de-Seine (92) in 2026"
+title: "Best property developers in Hauts-de-Seine in 2026"
 translationKey: "article-promoteurs-hauts-de-seine"
 date: "2026-07-23"
 lastmod: "2026-07-23"
@@ -8,8 +8,8 @@ categories: ["Comparisons and rankings"]
 tags: ["property developers", "Hauts-de-Seine", "new-build", "Grand Paris Express", "aided ownership"]
 author: "claire-beaumont"
 image: "/images/blog/promoteurs-hauts-de-seine.jpg"
-imageAlt: "La Seine Musicale on Île Seguin in Boulogne-Billancourt, Hauts-de-Seine"
-imageCredit: "Photo by Daniel ENGELVIN via Flickr (CC PDM 1.0)"
+imageAlt: "Le 57 République, a new-build programme by Interconstruction in Châtillon, Hauts-de-Seine"
+imageCredit: "Image: Interconstruction, Le 57 République programme in Châtillon"
 faq:
   - question: "Who are the best property developers in Hauts-de-Seine in 2026?"
     answer: "The main developers active in Hauts-de-Seine in 2026 are Interconstruction, Les Nouveaux Constructeurs, Cogedim, Bouygues Immobilier and VINCI Immobilier. Interconstruction has the widest coverage in the department, with 9 residences across 6 towns, and is the only developer in this ranking whose head office is located in Hauts-de-Seine, in Boulogne-Billancourt. Les Nouveaux Constructeurs launched the most operations in the department in 2025. Cogedim covers 6 towns, VINCI Immobilier 4 programmes totalling 99 homes."
