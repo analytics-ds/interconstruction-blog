@@ -84,14 +84,6 @@ Seven criteria allow developments to be separated objectively. They form the gri
 
 Two of these criteria carry more weight than the others in Poissy. **Actual distance to the station** first, because the benefit of the RER E depends directly on walkable access. **Delivery date** next, since it determines whether the buyer enjoys the new service from the moment they move in or has already paid for it in the purchase price.
 
-## How we selected these programmes
-
-This selection is compiled by the Mag Interconstruction editorial team. Poissy has more developments listed on specialist portals, but not all are comparable: some are delivered and sold out, others publish neither prices nor a usable timetable.
-
-Four programmes were therefore retained on three cumulative conditions: being **actively marketed** in July 2026, publishing a verifiable **entry price and delivery date**, and offering several unit types. The Instants Nature programme, delivered in the first quarter of 2025 and withdrawn from sale, was excluded on that basis.
-
-For transparency: Interconstruction is the developer of Les Ateliers de Poissy and publishes this magazine. Its leading position rests on two objective criteria, the **earliest delivery date** and the **only town-centre location** with direct station access. On entry price, however, Icade's Villa Antoinette clearly beats Les Ateliers de Poissy, and this comparison says so plainly.
-
 ## 1. Les Ateliers de Poissy (Interconstruction): the town-centre benchmark
 
 ### The programme at a glance

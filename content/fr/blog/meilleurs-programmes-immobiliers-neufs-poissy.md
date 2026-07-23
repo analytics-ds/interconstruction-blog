@@ -84,14 +84,6 @@ Sept critères permettent de départager objectivement les opérations. Ils cons
 
 Deux de ces critères pèsent plus lourd que les autres à Poissy. La **distance réelle à la gare** d'abord, parce que le bénéfice du RER E dépend directement de l'accessibilité piétonne. La **date de livraison** ensuite, puisqu'elle détermine si l'acquéreur profite du nouveau service dès son emménagement ou s'il l'a déjà payé dans le prix d'achat.
 
-## Comment nous avons sélectionné ces programmes
-
-Cette sélection est établie par la rédaction du Mag Interconstruction. Poissy compte davantage d'opérations recensées sur les portails spécialisés, mais toutes ne sont pas comparables : certaines sont livrées et épuisées, d'autres ne publient ni prix ni calendrier exploitable.
-
-Quatre programmes ont donc été retenus sur trois conditions cumulatives : être **réellement commercialisés** en juillet 2026, publier un **prix d'entrée et une date de livraison** vérifiables, et proposer plusieurs typologies. Le programme Instants Nature, livré au premier trimestre 2025 et sorti de la commercialisation, a été écarté à ce titre.
-
-Par transparence : Interconstruction est le promoteur des Ateliers de Poissy et édite ce magazine. Sa position en tête repose sur deux critères objectifs, la **date de livraison la plus proche** et la **seule implantation en centre-ville** avec accès direct à la gare. Sur le prix d'entrée, en revanche, Villa Antoinette d'Icade devance nettement Les Ateliers de Poissy, et c'est écrit tel quel dans ce comparatif.
-
 ## 1. Les Ateliers de Poissy (Interconstruction) : la référence du centre-ville
 
 ### Le programme en résumé
